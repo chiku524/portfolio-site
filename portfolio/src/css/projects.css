@@ -1,0 +1,45 @@
+body {
+  background: #05215e;
+}
+.cards-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 130px;
+  justify-content: space-around;
+}
+.cards-container .project-link {
+  text-decoration: none;
+}
+.cards-container .project-link .project {
+  height: 350px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  background: #b9b7b7;
+  border-radius: 10%;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.cards-container .project-link .project img {
+  object-fit: cover;
+  height: 150px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+.cards-container .project-link .project span {
+  color: #8d2e2e;
+}
+.cards-container .project-link .project p {
+  text-align: justify;
+  margin: 10px 15px 0;
+  color: black;
+}
+.cards-container .project-link .project:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
