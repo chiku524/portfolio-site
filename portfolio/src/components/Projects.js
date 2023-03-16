@@ -5,6 +5,8 @@ import { ExternalLink } from "react-external-link";
 import ExpatJournal from "../images/expat-journal.png";
 import HajjarAssociatesRemake from "../images/hajjar-associates-remake.png";
 import Xtrades from "../images/xtrades.png";
+import Metaverse from "../images/metaverse.png";
+import AnimationsSite from "../images/animations-site.png";
 import '../css/projects.css';
 
 const Projects = () => {
@@ -52,16 +54,17 @@ const Projects = () => {
                     <p>In this project, I was to create a stock exchange UI within 24 hours to the best of my ability. It was an interview coding test that shows what I am capable of doing in a fast paced environment.</p>
                 </div>
             </ExternalLink>
-            <ExternalLink href="https://expatjournal3.netlify.app/" className="project-link">
+            <ExternalLink href="https://metaverse-chiku524.vercel.app/" className="project-link">
                 <div className="project project-1">  
-                    <img src={ExpatJournal} />  
-                    <span>Expat Journal</span>
+                    <img src={Metaverse} />  
+                    <span>Metaverse</span>
+                    <p>This is a freelance project I started for a gaming group of people who wanted to build a metaverse. They abandoned the project as I was working on it but it was great experience nonetheless.</p>
                 </div>
             </ExternalLink>
-            <ExternalLink href="https://expatjournal3.netlify.app/" className="project-link">
+            <ExternalLink href="https://portfolio-site-chiku524.vercel.app/" className="project-link">
                 <div className="project project-1">  
-                    <img src={ExpatJournal} />  
-                    <span>Expat Journal</span>
+                    <img src={AnimationsSite} />  
+                    <span>Animations Site</span>
                 </div>
             </ExternalLink>
             <ExternalLink href="https://expatjournal3.netlify.app/" className="project-link">
