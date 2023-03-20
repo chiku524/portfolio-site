@@ -3,48 +3,67 @@ body {
 }
 .cards-container {
   width: 80%;
+  height: 80vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 80px;
-  justify-content: space-around;
+  overflow: hidden;
+}
+.cards-container .projects-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 80px;
+}
+.cards-container .projects-title div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2em;
+  flex-wrap: wrap;
+}
+.cards-container .project-imgs {
+  width: 70%;
+  position: relative;
+  height: 50%;
+}
+.cards-container .project-imgs img {
+  max-width: 80%;
+  bottom: 0;
+  left: 10%;
+  position: absolute;
+  display: none;
+}
+.cards-container .project-imgs .expat-img {
+  display: block;
+}
+.cards-container .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
 }
 .cards-container .project-link {
   text-decoration: none;
 }
-.cards-container .project-link .project {
-  height: 350px;
-  width: 700px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #b9b7b7;
-  border-radius: 10%;
-  margin-bottom: 40px;
-  cursor: pointer;
-  transition: 0.3s;
-  overflow: hidden;
-}
-.cards-container .project-link .project img {
-  object-fit: cover;
-  transform-origin: top center;
-  height: 150px;
-  width: 700px;
-  margin-bottom: 5px;
-}
-.cards-container .project-link .project span {
+.cards-container .project-link span {
   color: #8d2e2e;
   text-align: center;
   width: 100%;
   display: block;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 2rem;
+  border-bottom: 2px solid silver;
 }
-.cards-container .project-link .project p {
-  text-align: justify;
-  margin: 10px 15px 0;
-  color: black;
-}
-.cards-container .project-link .project:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
+.cards-container .project-link:hover {
+  background-color: rgba(123, 125, 128, 0.247);
 }
