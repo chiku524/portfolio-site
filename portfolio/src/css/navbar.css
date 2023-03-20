@@ -1,14 +1,15 @@
 .navbarContainer {
-  width: 100%;
   height: 80px;
   background: #333333;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Lucida Handwriting', cursive;
+  width: 100%;
+  transition: all 1s ease;
   position: fixed;
-  top: 0;
-  z-index: 1;
+  z-index: 20;
+  margin-top: -80px;
 }
 .navbarContainer .navbar {
   display: flex;
@@ -57,4 +58,30 @@
   margin: -30px -5px -15px;
   border-radius: 5px;
   background: rgba(231, 228, 228, 0.116);
+}
+.fadein {
+  background-color: rgba(32, 32, 32);
+  animation: fadein 0.5s ease;
+  animation-fill-mode: forwards;
+}
+.fadeout {
+  background-color: rgba(51, 51, 51);
+  animation: fadeout 1s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    background-color: rgba(51, 51, 51);
+  }
+  to {
+    background-color: #202020;
+  }
+}
+@keyframes fadeout {
+  from {
+    background-color: #202020;
+  }
+  to {
+    background-color: rgba(51, 51, 51);
+  }
 }

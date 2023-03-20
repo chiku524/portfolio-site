@@ -1,0 +1,54 @@
+.footerContainer {
+  background-color: #202020;
+  height: 30%;
+  width: 100%;
+  padding-bottom: 80px;
+  border-top: 3px solid #056399;
+}
+.footerContainer .borders {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 40px;
+}
+.footerContainer .content {
+  margin-left: 5%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footerContainer .content .servicesTitle {
+  color: #056399;
+}
+.footerContainer .content .servicesTitle .services {
+  margin-top: 20px;
+}
+.footerContainer .content .servicesTitle .services p {
+  color: silver;
+}
+.footerContainer .content .projectTitle {
+  color: #056399;
+  margin-left: 25%;
+}
+.footerContainer .content .projectTitle .projects {
+  margin-top: 20px;
+}
+.footerContainer .content .projectTitle .projects p {
+  color: silver;
+}
+.footerContainer .content .contactTitle {
+  color: #056399;
+  margin-left: 25%;
+}
+.footerContainer .content .contactTitle .info {
+  margin-top: 20px;
+}
+.footerContainer .content .contactTitle .info p {
+  color: silver;
+}
+.footerContainer .content .contactTitle .info a {
+  text-decoration: solid underline rgba(255, 255, 255, 0.26) 0.5px;
+  color: #519dc9;
+}

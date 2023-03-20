@@ -3,30 +3,43 @@
   background: #333333;
   height: 100vh;
   width: 100%;
+  overflow-x: hidden !important;
+}
+.home-container .page-1 {
   overflow: hidden;
 }
-.home-container .title {
+.home-container .page-1 .title {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.home-container .title div {
+.home-container .page-1 .title div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 3em;
   flex-wrap: wrap;
 }
-.home-container .blurb {
+.home-container .page-1 .blurb {
   width: 80%;
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-around;
 }
-.home-container .blurb img {
+.home-container .page-1 .blurb .nico-picture {
   border-radius: 25%;
 }
-.home-container .blurb p {
+.home-container .page-1 .blurb .content p {
   color: whitesmoke;
   align-self: center;
+  width: 60%;
+}
+.home-container .page-1 .blurb .content #arrow-icon-svg:hover {
+  cursor: pointer;
+  filter: invert(50%) sepia(86%) saturate(1871%) hue-rotate(158deg) brightness(90%) contrast(101%);
+}
+.home-container .page-2 {
+  overflow: hidden;
 }
