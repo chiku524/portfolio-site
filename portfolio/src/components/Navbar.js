@@ -41,12 +41,17 @@ const NavBar = () => {
         let pg2 = document.querySelector(".page-2");
         let pg3 = document.querySelector(".page-3");
         if(pg2.classList.contains("active")) {
-            gsap.to(pg2, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1})
-                .to(pg1, {display: "block", x: 0, scale: 1, rotateZ: -5, duration: 1})
+            gsap.to(pg2, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1});
+            gsap.to(pg1, {display: "block", x: 0, scale: 1, rotateZ: 0, duration: 1});
+            pg1.classList.add("active");
+            pg2.classList.remove("active");
         }
         if(pg3.classList.contains("active")) {
-            gsap.to(pg3, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1})
-                .to(pg1, {display: "block", x: 0, scale: 1, rotateZ: -5, duration: 1})
+            gsap.to(pg3, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1});
+            gsap.to(pg2, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1});
+            gsap.to(pg1, {display: "block", x: 0, scale: 1, rotateZ: 0, duration: 1});
+            pg1.classList.add("active");
+            pg3.classList.remove("active");
         }
     }
 

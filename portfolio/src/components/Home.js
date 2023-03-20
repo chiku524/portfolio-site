@@ -92,8 +92,8 @@ const Home = () => {
             console.log(page2.classList);
             console.log(page3.classList);
 
-            page2TL.to(page2tank, {rotateZ: 5, scale: 0.4, duration: 1})
-                    .to(page2tank, { x: -2500, duration: 1})
+            page2TL.to(page2, {rotateZ: 5, scale: 0.4, duration: 1})
+                    .to(page2, { x: -2500, duration: 1})
                     .to(page3, {x: 0, scale: 1, display: "block", duration: 1})})
     }, [])
 
@@ -118,8 +118,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Page2 className="page-2" />
-            <Page3 className="page-3" />
+            <Page2 />
+            <Page3 />
         </div>
     )
 }

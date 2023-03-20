@@ -5,6 +5,9 @@
   width: 100%;
   overflow-x: hidden !important;
 }
+.home-container .active {
+  display: block !important;
+}
 .home-container .page-1 {
   overflow: hidden;
 }
