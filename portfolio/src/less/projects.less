@@ -22,6 +22,22 @@ body {
         position: relative;
         top: 80px;
 
+        @media screen and (max-width: 1702px) {
+            .last-row {
+                margin-top: -70px;
+            }
+        }
+        @media screen and (max-width: 1243px) {
+            .third-row {
+                margin-top: -70px;
+            }
+        }
+        @media screen and (max-width: 726px) {
+            .second-row {
+                margin-top: -70px;
+            }
+        }
+
         div {
             display: flex;
             flex-direction: row;
@@ -54,6 +70,27 @@ body {
         justify-content: center;
         height: 100%;
         width: 30%;
+    }
+    
+    @media screen and (max-width: 1702px) {
+        .project-imgs, .projects {
+            margin-top: -70px;
+        }
+        .project-imgs img {
+            max-width: 800px;
+        }
+    }
+    @media screen and (max-width: 1600px) {
+        .project-imgs img {
+            max-width: 700px;
+            height: 400px;
+        }
+    }
+    @media screen and (max-width: 1430px) {
+        .project-imgs img {
+            max-width: 600px;
+            height: 400px;
+        }
     }
 
     .project-link {

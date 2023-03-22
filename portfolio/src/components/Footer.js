@@ -13,27 +13,16 @@ const Footer = () => {
             </div>
             <div className='content'>
                 <div className='servicesTitle'>
-                    <h4>Services</h4>
+                    <h4>Links</h4>
                     <div className='services'>
-                        <ExternalLink to='/consulting'>
+                        <Link to='/home'>
                             <p>Home</p>
-                        </ExternalLink>
-                        <ExternalLink to='/construction'>
+                        </Link>
+                        <Link to='/projects'>
                             <p>Projects</p>
-                        </ExternalLink>
-                        <ExternalLink to='/development'>
+                        </Link>
+                        <ExternalLink href='https://github.com/chiku524'>
                             <p>Github</p>
-                        </ExternalLink>
-                    </div>
-                </div>
-                <div className='projectTitle'>
-                    <h4>Projects</h4>
-                    <div className='projects'>
-                        <ExternalLink to='/consulting/private-projects'>
-                            <p>Private Projects</p>
-                        </ExternalLink>
-                        <ExternalLink to='/consulting/public-projects'>
-                            <p>Public Projects</p>
                         </ExternalLink>
                     </div>
                 </div>

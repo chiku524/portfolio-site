@@ -70,7 +70,7 @@ const Page2 = () => {
         <div className="page-2">
             <div className='tank-container'>
                 <div className="tank">
-                {bubArray ? bubArray.map((item, index) => <div className={`bubble bubble-${index}`} style={{width: index*1.3}}><div className='tint'></div> </div>) : console.log('didnt work')};
+                {bubArray ? bubArray.map((item, index) => <div key={index} className={`bubble bubble-${index}`} style={{width: index*1.3}}><div className='tint'></div> </div>) : console.log('didnt work')};
                 </div>
                 <p className="explanation">Here is a cool animation that shows what I am capable of using DOM manipulation.</p>
                 <p className="blurb">All of this is built using React.js, JavaScript and CSS. Feel free to play with the bubbles using your mouse.</p>

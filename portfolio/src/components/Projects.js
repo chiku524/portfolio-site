@@ -80,9 +80,9 @@ const Projects = () => {
         <div className="cards-container">
             <div className='projects-title'>
                     <div><h1>H</h1><h1>E</h1><h1>R</h1><h1>E</h1><h1>&nbsp;</h1><h1>A</h1><h1>R</h1><h1>E</h1></div>
-                    <div><h1>&nbsp;</h1><h1>S</h1><h1>O</h1><h1>M</h1><h1>E</h1><h1>&nbsp;</h1></div>
-                    <div><h1>O</h1><h1>F</h1><h1>&nbsp;</h1><h1>M</h1><h1>Y</h1><h1>&nbsp;</h1><h1>S</h1><h1>I</h1><h1>D</h1><h1>E</h1></div>
-                    <div><h1>&nbsp;</h1><h1>P</h1><h1>R</h1><h1>O</h1><h1>J</h1><h1>E</h1><h1>C</h1><h1>T</h1><h1>S</h1></div>
+                    <div className="second-row"><h1>&nbsp;</h1><h1>S</h1><h1>O</h1><h1>M</h1><h1>E</h1><h1>&nbsp;</h1></div>
+                    <div className="third-row"><h1>O</h1><h1>F</h1><h1>&nbsp;</h1><h1>M</h1><h1>Y</h1><h1>&nbsp;</h1><h1>S</h1><h1>I</h1><h1>D</h1><h1>E</h1></div>
+                    <div className="last-row"><h1>&nbsp;</h1><h1>P</h1><h1>R</h1><h1>O</h1><h1>J</h1><h1>E</h1><h1>C</h1><h1>T</h1><h1>S</h1></div>
             </div>
             <div className="project-imgs">
                 <img src={ExpatJournal} className="expat-img"/> 
