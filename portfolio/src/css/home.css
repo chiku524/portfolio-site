@@ -1,3 +1,14 @@
+body {
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
 .home-container {
   margin-top: 80px;
   background: #333333;
@@ -24,24 +35,63 @@
   font-size: 3em;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 1492px) {
+  .home-container .page-1 .title .bottom-half {
+    margin-top: -100px;
+  }
+}
+@media screen and (max-width: 919px) {
+  .home-container .page-1 .title .mid-half {
+    margin-top: -100px;
+  }
+}
 .home-container .page-1 .blurb {
   width: 80%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   justify-content: space-around;
+  height: 600px;
 }
 .home-container .page-1 .blurb .nico-picture {
   border-radius: 25%;
+}
+@media screen and (max-width: 1100px) {
+  .home-container .page-1 .blurb .nico-picture {
+    max-height: 350px;
+    max-width: 350px;
+  }
 }
 .home-container .page-1 .blurb .content p {
   color: whitesmoke;
   align-self: center;
   width: 60%;
+  margin-top: -50px;
+}
+.home-container .page-1 .blurb .content .arrow-info {
+  margin-top: 25px;
+}
+.home-container .page-1 .blurb .content .svg-container {
+  margin: -80px 0 0 -60px;
+}
+@media screen and (max-width: 1120px) {
+  .home-container .page-1 .blurb .content .svg-container {
+    margin-top: -350px;
+  }
+}
+@media screen and (max-width: 919px) {
+  .home-container .page-1 .blurb .content .svg-container {
+    margin-left: -100px;
+  }
 }
 .home-container .page-1 .blurb .content #arrow-icon-svg:hover {
   cursor: pointer;
   filter: invert(50%) sepia(86%) saturate(1871%) hue-rotate(158deg) brightness(90%) contrast(101%);
+}
+@media screen and (max-width: 1200px) {
+  .home-container .page-1 .blurb .content {
+    margin-top: -50px;
+  }
 }
 .home-container .page-2 {
   overflow: hidden;

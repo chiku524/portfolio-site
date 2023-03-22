@@ -46,12 +46,14 @@ const NavBar = () => {
             pg1.classList.add("active");
             pg2.classList.remove("active");
         }
-        if(pg3.classList.contains("active")) {
+        else if(pg3.classList.contains("active")) {
             gsap.to(pg3, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1});
             gsap.to(pg2, {display: "none", x: 2500, scale: 1, rotateZ: 0, duration: 1});
             gsap.to(pg1, {display: "block", x: 0, scale: 1, rotateZ: 0, duration: 1});
             pg1.classList.add("active");
             pg3.classList.remove("active");
+        } else {
+            return null;
         }
     }
 

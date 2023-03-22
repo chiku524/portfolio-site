@@ -102,8 +102,8 @@ const Home = () => {
             <div className="page-1 active">
                 <div className="title">
                     <div><h1>W</h1><h1>E</h1><h1>L</h1><h1>C</h1><h1>O</h1><h1>M</h1><h1>E</h1><h1>&nbsp;</h1></div>
-                    <div><h1>T</h1><h1>O</h1><h1>&nbsp;</h1><h1>M</h1><h1>Y</h1><h1>&nbsp;</h1></div>
-                    <div><h1>P</h1><h1>O</h1><h1>R</h1><h1>T</h1><h1>F</h1><h1>O</h1><h1>L</h1><h1>I</h1><h1>O</h1></div>
+                    <div className="mid-half"><h1>T</h1><h1>O</h1><h1>&nbsp;</h1><h1>M</h1><h1>Y</h1><h1>&nbsp;</h1></div>
+                    <div className="bottom-half"><h1>P</h1><h1>O</h1><h1>R</h1><h1>T</h1><h1>F</h1><h1>O</h1><h1>L</h1><h1>I</h1><h1>O</h1></div>
                 </div>
                 <div className="blurb">
                     <img src={NicoPic} className="nico-picture" />
@@ -112,6 +112,7 @@ const Home = () => {
     Hello! I go by the name Nico Chikuji, and welcome to my portfolio! I am a software engineer with a passion for keeping up with the latest trends on what's going on with the tech world. I love working on teams to code new projects and am always looking for new opportunities to grow and learn both inside and outside of the field. Feel free to browse through any of my public repos and feel free to reach out whenever!
     My favorite tech stacks include the following: React.js/Redux, Express.js/Node, and Firebase.
                         </p>
+                        <p className="arrow-info">Click on arrow for next page!</p>
                         <div className="svg-container">
                             <ArrowIcon className="arrow-icon" />
                         </div>
