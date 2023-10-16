@@ -46,15 +46,15 @@ const Home = () => {
             y: 75,
             duration: 1,
             textShadow: "0px 0px 2px rgb(231, 228, 228)",
-            delay: 1.5
+            delay: 2
         })
 
-        gsap.set(".svg-container", {opacity: 0, x: 450, y: 100, rotate: 275, rotateY: 180, width: 100, height: 100})
+        gsap.set(".svg-container", {opacity: 0, x: 450, y: 130, rotate: 275, rotateY: 180, width: 100, height: 100})
 
         gsap.to(`.svg-container`, {
             opacity: 1,
             duration: 1.5,
-            delay: 2
+            delay: 3.5
         })
         
         gsap.set(".page-2", {position: "absolute", top: 80, x: 2500, scale: 1, width: "100%", height: "100%", display: "none"});

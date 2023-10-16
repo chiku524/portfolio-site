@@ -11,7 +11,7 @@ body {
 .home-container {
     margin-top: 80px;
     background: rgba(51, 51, 51, 1);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow-x: hidden !important;
 
@@ -21,11 +21,15 @@ body {
 
     .page-1 {
         overflow: hidden;
+        height: 100%;
+        // margin-bottom: 80px;
+
         .title {
             display: flex;
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 80px;
     
             div {
                 display: flex;
@@ -54,12 +58,12 @@ body {
             flex-direction: row;
             margin: 0 auto;
             justify-content: space-around;
-            height: 600px;
+            height: 850px;
             
             .nico-picture {
                 border-radius: 25%;
-                // max-width: 200px;
-                // max-height: 200px;
+                max-height: 700px;
+                max-width: 700px;
             }
             @media screen and (max-width: 1100px) {
                 .nico-picture {
@@ -73,7 +77,7 @@ body {
                     color: whitesmoke;
                     align-self: center;
                     width: 60%;
-                    margin-top: -50px;
+                    // margin-top: -50px;
                 }
 
                 .arrow-info {
@@ -100,10 +104,52 @@ body {
                     filter: invert(50%) sepia(86%) saturate(1871%) hue-rotate(158deg) brightness(90%) contrast(101%);
                 }
             }
-            
-            @media screen and (max-width: 1200px) {
+        }
+        @media screen and (max-width: 1500px) {
+            .blurb {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -100px;
+
+                .nico-picture {
+                    max-height: 600px;
+                    max-width: 600px;
+                }
+    
                 .content {
-                    margin-top: -50px;
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: -200px;
+                    
+                    .arrow-info {
+                        width: 15%;
+                        margin: 0px 50px;
+                    }
+
+                    .svg-container {
+                        margin: 0 270px 0 -350px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1050px) {
+            .blurb {
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: -100px;
+
+                    .arrow-info {
+                        margin: 0;
+                    }
+
+                    .svg-container {
+                        margin: 0 270px 0 -400px;
+                    }
                 }
             }
         }
@@ -111,5 +157,17 @@ body {
 
     .page-2 {
         overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 828px) {
+    .home-container {
+        .page-1 {
+            .title {
+                div h1:last-child {
+                    display: none;
+                }
+            }
+        }
     }
 }
