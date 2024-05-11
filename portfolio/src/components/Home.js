@@ -81,7 +81,6 @@ const Home = () => {
         gsap.set(".page-2 .svg-container", {opacity: 0, rotate: 275, rotateY: 180, width: 100, height: 100, position: "absolute"});
 
         let arrowSVG = document.querySelector(".page-2 #arrow-icon-svg");
-        let page2tank = document.querySelector(".page-2 .tank-container");
         let page2 = document.querySelector(".page-2");
         let page3 = document.querySelector(".page-3");
 
@@ -117,6 +116,7 @@ const Home = () => {
                             <ArrowIcon className="arrow-icon" />
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <Page2 />

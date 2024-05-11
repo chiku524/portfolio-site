@@ -2,87 +2,136 @@ import React, { useState, useLayoutEffect, useEffect } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ReactComponent as ArrowIcon } from "../images/arrow-icon.svg";
+import { ExternalLink } from "react-external-link";
+import ExpatJournal from "../images/expat-journal.png";
+import HajjarAssociatesRemake from "../images/hajjar-associates-remake.png";
+import Xtrades from "../images/xtrades.png";
+import Metaverse from "../images/metaverse.png";
+import AnimationsSite from "../images/animations-site.png";
+import '../css/projects.css';
 import '../css/page2.css';
 
-const Page2 = () => {
-    const [bubArray, setBubArray] = useState([]);
+const Projects = () => {
 
-    gsap.registerPlugin(ScrollTrigger);
+    useLayoutEffect(() => {
+        gsap.set(".cards-container .projects-title div h1", {scale: 0, opacity: 0, y: 0})
 
-    for(let i=0; i<100; i++) {
-        bubArray.push(i);
-      }
-    
-      useLayoutEffect(() => {
-        bubArray.forEach(el => {
-          gsap.set(`.bubble-${el}`, {
-            x: "random(0, 2000)",
-            y: "random(0, 2000)",
-          })
+        gsap.to(`.cards-container .projects-title div h1`, {
+            scale: 1,
+            opacity: 1, 
+            color: "#00a4d6",
+            y: -45,
+            ease: "ease",
+            duration: 0.15,
+            transformOrigin: "50% 50%",
+            stagger: {from: "edges", amount: 0.7},
+            textShadow: "0px 0px 8px rgb(32, 32, 32)"
         })
-      }, [])
+    }, [])
     
-      useEffect(() => {
-        let bubbles = document.querySelectorAll(".bubble");
-        let tank = document.querySelector(".tank");
-        var xMove;
-        var yMove;
-        
-        const getMovement = (e) => {
-          xMove = e.movementX;
-          yMove = e.movementY;   
-        }
-    
-        const moveBubble = (e, idx, xMove, yMove) => {;
-          let xMoveDupe = xMove * 10;
-          let yMoveDupe = yMove * 10;
-    
-          gsap.to(`.bubble-${idx}`, {
-            x: `+=${xMoveDupe}`,
-            y: `+=${yMoveDupe}`,
-            duration: 2
-          })
-        }
-          
-        tank.addEventListener('mousemove', (e) => getMovement(e));
-        bubbles.forEach((el, idx) => el.addEventListener("mouseenter", (e) => moveBubble(e, idx, xMove, yMove)));
-        
-      }, [])
+    //anim project border
+  useLayoutEffect(() => {
+    let animBorder = gsap.timeline();
+    animBorder
+    .from(".cards-container", {
+        boxShadow: "0px 0px 10px #424141",
+        borderRadius: '10%',
+        ease: "elastic",
+        yoyo: true
+    })
+    .to(".cards-container", {
+      keyframes: {
+        boxShadow: ["0px 0px 10px #424141", "0px 0px 15px #e2bd1a", "0px 0px 20px #29f176", "0px 0px 20px rgb(41, 128, 241)", "0px 0px 15px #c418bb", "0px 0px 10px #424141"],
+      },
+      repeat: -1,
+      duration: 10,
+    })
+  }, [])
 
-      useLayoutEffect(() => {
-        let nextButton = document.querySelector(".next-btn");
-        let contactNext = document.querySelector(".contact-next");
-        let svgContainer = document.querySelector(".next-btn .svg-container");
-        
-        gsap.set(svgContainer, {display: "none", scale: 0, transformOrigin: "50% 50%"});
+  useEffect(() => {
+    let expat = document.querySelector(".project-link.expat");
+    let hajjar = document.querySelector(".project-link.hajjar");
+    let xtrades = document.querySelector(".project-link.xtrades");
+    let metaverse = document.querySelector(".project-link.metaverse");
+    let animations = document.querySelector(".project-link.animations");
+    let expatImg = document.querySelector(".expat-img");
+    let hajjarImg = document.querySelector(".hajjar-img");
+    let xtradesImg = document.querySelector(".xtrades-img");
+    let metaverseImg = document.querySelector(".metaverse-img");
+    let animationsImg = document.querySelector(".animations-img");
 
-        nextButton.addEventListener("mouseenter", () => {
-            gsap.to(contactNext, {transformOrigin: "50% 50%", scaleX: 0, display: "none"});
-            gsap.to(svgContainer, {display: "block", scale: 1, duration: 1});
-        })
-        nextButton.addEventListener("mouseleave", () => {
-            gsap.to(contactNext, {transformOrigin: "50% 50%", scale: 1, display: "block"})
-            gsap.to(svgContainer, {display: "none", scale: 0})
-        })
-      }, [])
+    expat.addEventListener("mouseover", () => {gsap.to(expatImg, {zIndex: 1, display: "block", scale: 1})})
+    expat.addEventListener("mouseleave", () => {gsap.to(expatImg, {})})
+
+    hajjar.addEventListener("mouseover", () => {gsap.to(hajjarImg, {zIndex: 1, display: "block", scale: 1})})
+    hajjar.addEventListener("mouseleave", () => {gsap.to(hajjarImg, {display: "none"})})
+
+    xtrades.addEventListener("mouseover", () => {gsap.to(xtradesImg, {zIndex: 1, display: "block", scale: 1})})
+    xtrades.addEventListener("mouseleave", () => {gsap.to(xtradesImg, {display: "none"})})
+
+    metaverse.addEventListener("mouseover", () => {gsap.to(metaverseImg, {zIndex: 1, display: "block", scale: 1})})
+    metaverse.addEventListener("mouseleave", () => {gsap.to(metaverseImg, {display: "none"})})
+
+    animations.addEventListener("mouseover", () => {gsap.to(animationsImg, {zIndex: 1, display: "block", scale: 1})})
+    animations.addEventListener("mouseleave", () => {gsap.to(animationsImg, {display: "none"})})
+    
+  }, [])
+    
 
     return(
-        <div className="page-2">
-            <div className='tank-container'>
-                <div className="tank">
-                {bubArray ? bubArray.map((item, index) => <div key={index} className={`bubble bubble-${index}`} style={{width: index*1.3}}><div className='tint'></div> </div>) : console.log('didnt work')};
-                </div>
-                <p className="explanation">Here is a cool animation that shows what I am capable of using DOM manipulation.</p>
-                <p className="blurb">All of this is built using React.js, JavaScript and CSS. Feel free to play with the bubbles using your mouse.</p>
-                <div className="next-btn">
-                    <p className="contact-next">For my contact info, please click here to go to the next page!</p>
-                    <div className="svg-container">
-                        <ArrowIcon className="arrow-icon" />
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div className="page-2" >
+          <div className="cards-container">
+              <div className='projects-title'>
+                      <div><h1>H</h1><h1>E</h1><h1>R</h1><h1>E</h1><h1>&nbsp;</h1><h1>A</h1><h1>R</h1><h1>E</h1></div>
+                      <div className="second-row"><h1>&nbsp;</h1><h1>S</h1><h1>O</h1><h1>M</h1><h1>E</h1><h1>&nbsp;</h1></div>
+                      <div className="third-row"><h1>O</h1><h1>F</h1><h1>&nbsp;</h1><h1>M</h1><h1>Y</h1><h1>&nbsp;</h1><h1>S</h1><h1>I</h1><h1>D</h1><h1>E</h1></div>
+                      <div className="last-row"><h1>&nbsp;</h1><h1>P</h1><h1>R</h1><h1>O</h1><h1>J</h1><h1>E</h1><h1>C</h1><h1>T</h1><h1>S</h1></div>
+              </div>
+              <div className="project-imgs">
+                  <img src={ExpatJournal} className="expat-img"/> 
+                  <img src={HajjarAssociatesRemake} className="hajjar-img"/> 
+                  <img src={Xtrades} className="xtrades-img"/> 
+                  <img src={Metaverse} className="metaverse-img"/>
+                  <img src={AnimationsSite} className="animations-img"/> 
+              </div>
+              <div className="projects">
+                  <ExternalLink href="https://portfolio-site-chiku524.vercel.app/" className="project-link animations">
+                      <div className="project project-1">  
+                          <span className="animations">Animations Site</span>
+                      </div>
+                  </ExternalLink>
+                  <ExternalLink href="https://expatjournal3.netlify.app/" className="project-link expat">
+                      <div className="project project-1">  
+                          <span className="expat">Expat Journal</span>
+                      </div>
+                  </ExternalLink>
+                  <ExternalLink href="https://hajjar-associates-remake.vercel.app/" className="project-link hajjar">
+                      <div className="project project-1">  
+                          <span className="hajjar">Hajjar Associates Remake</span>
+                      </div>
+                  </ExternalLink>
+                  <ExternalLink href="https://xtrades-challenge.vercel.app/" className="project-link xtrades">
+                      <div className="project project-1">  
+                          <span className="xtrades">X-trades 24 hour challenge</span>
+                      </div>
+                  </ExternalLink>
+                  <ExternalLink href="https://metaverse-chiku524.vercel.app/" className="project-link metaverse">
+                      <div className="project project-1">  
+                          <span className="metaverse">Metaverse</span>
+                      </div>
+                  </ExternalLink>
+                  
+              </div>
+          </div>
+          <div className="next-btn">
+              <p className="contact-next">For my contact info, please click here to go to the next page!</p>
+              <div className="svg-container">
+                  <ArrowIcon className="arrow-icon" />
+              </div>
+          </div>
+      </div>
+        
     )
 }
 
-export default Page2;
+export default Projects;

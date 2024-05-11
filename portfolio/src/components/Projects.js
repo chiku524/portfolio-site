@@ -92,6 +92,11 @@ const Projects = () => {
                 <img src={AnimationsSite} className="animations-img"/> 
             </div>
             <div className="projects">
+                <ExternalLink href="https://portfolio-site-chiku524.vercel.app/" className="project-link animations">
+                    <div className="project project-1">  
+                        <span className="animations">Animations Site</span>
+                    </div>
+                </ExternalLink>
                 <ExternalLink href="https://expatjournal3.netlify.app/" className="project-link expat">
                     <div className="project project-1">  
                         <span className="expat">Expat Journal</span>
@@ -112,11 +117,7 @@ const Projects = () => {
                         <span className="metaverse">Metaverse</span>
                     </div>
                 </ExternalLink>
-                <ExternalLink href="https://portfolio-site-chiku524.vercel.app/" className="project-link animations">
-                    <div className="project project-1">  
-                        <span className="animations">Animations Site</span>
-                    </div>
-                </ExternalLink>
+                
             </div>
         </div>
     )
